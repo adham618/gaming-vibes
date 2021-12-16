@@ -13,7 +13,7 @@ const Navbar: React.FC = () => {
         </ul>
       </nav>
       <div className="banner">
-        <Image src="/banner.png" width={966} height={276} alt='banner' />
+        <Image src="/banner.png" width={966} height={276} alt='banner' draggable="false" />
       </div>
     </div >
   )
