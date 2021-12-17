@@ -1,7 +1,11 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import { useContext } from 'react'
+import { AuthContext } from '../stores/AuthContext'
 
 const Navbar: React.FC = () => {
+  const val = useContext(AuthContext)
+  console.log(val)
   return (
     <div>
       <nav>
