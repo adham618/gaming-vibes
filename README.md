@@ -1,7 +1,7 @@
 # Gaming Vibes
 
-![Screenshot](screenshot.png)
 ![Screenshot](screenshot2.png)
+![Screenshot](screenshot.png)
 
 ## Image Credit (for use in project)
 
