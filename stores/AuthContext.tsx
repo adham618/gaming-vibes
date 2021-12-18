@@ -15,7 +15,7 @@ export const AuthContext = createContext({
 })
 
 const AuthContextProvider: React.FC = ({ children }) => {
-  const [user, setUser] = useState<string | null | undefined | number>(null)
+  const [user, setUser] = useState(null)
   const [authReady, setAuthReady] = useState<boolean>(false)
 
   useEffect(() => {
