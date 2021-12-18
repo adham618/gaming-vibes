@@ -2,7 +2,7 @@ import { createContext, useEffect, useState } from "react";
 import netlifyIdentity from 'netlify-identity-widget'
 type AuthContext =
   {
-    user: null,
+    user: null | object,
     login: () => void,
     logout: () => void,
     authReady: boolean
