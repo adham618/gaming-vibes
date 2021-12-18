@@ -4,8 +4,8 @@ import { useContext } from 'react'
 import { AuthContext } from '../stores/AuthContext'
 
 const Navbar: React.FC = () => {
-  const val = useContext(AuthContext)
-  console.log(val)
+  const { user, login } = useContext(AuthContext)
+  console.log(user)
   return (
     <div>
       <nav>
@@ -14,6 +14,7 @@ const Navbar: React.FC = () => {
         <ul>
           <li><Link href="/"><a>Home</a></Link></li>
           <li><Link href="/guides"><a>Guides</a></Link></li>
+          <li onClick={login} className='btn'>Login\Signup</li>
         </ul>
       </nav>
       <div className="banner">
