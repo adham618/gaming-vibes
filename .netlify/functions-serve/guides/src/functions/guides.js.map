@@ -1,0 +1,8 @@
+{
+  "version": 3,
+  "sources": ["../../home/adham/Projects/05-NextJs Projects/gaming-vibes/functions/guides.ts"],
+  "sourceRoot": "/tmp/tmp-3529-VfXpKtfNhiEo",
+  "sourcesContent": ["exports.handler = async (event: any, context: { clientContext: { user: any } }) => {\n  const guides = [\n    { title: 'Beat all Zelda Bosses Like a Boss', author: 'mario' },\n    { title: 'Mario Kart Shortcuts You Never Knew Existed', author: 'luigi' },\n    { title: 'Ultimate Street Fighter Guide', author: 'chun-li' },\n  ]\n\n  if (context.clientContext.user) {\n    // fetch data & then return\n    return {\n      statusCode: 200,\n      body: JSON.stringify(guides)\n    }\n  }\n\n  // return error status\n  return {\n    statusCode: 401,\n    body: JSON.stringify({ mssg: 'ah ah ah, you must be logged into see this' })\n  }\n\n}\nexport { }"],
+  "mappings": ";;;;AAAA;AAAA,QAAQ,UAAU,OAAO,OAAY,YAA8C;AACjF,QAAM,SAAS;AAAA,IACb,EAAE,OAAO,qCAAqC,QAAQ;AAAA,IACtD,EAAE,OAAO,+CAA+C,QAAQ;AAAA,IAChE,EAAE,OAAO,iCAAiC,QAAQ;AAAA;AAGpD,MAAI,QAAQ,cAAc,MAAM;AAE9B,WAAO;AAAA,MACL,YAAY;AAAA,MACZ,MAAM,KAAK,UAAU;AAAA;AAAA;AAKzB,SAAO;AAAA,IACL,YAAY;AAAA,IACZ,MAAM,KAAK,UAAU,EAAE,MAAM;AAAA;AAAA;",
+  "names": []
+}

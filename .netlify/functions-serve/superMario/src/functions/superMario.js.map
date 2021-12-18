@@ -1,0 +1,8 @@
+{
+  "version": 3,
+  "sources": ["../../home/adham/Projects/05-NextJs Projects/gaming-vibes/functions/superMario.ts"],
+  "sourceRoot": "/tmp/tmp-3529-jMPuQLOdFVuZ",
+  "sourcesContent": ["exports.handler = async () => {\n  console.log('function ran')\n\n  const data = { name: 'mario', age: 35, job: 'plumber' }\n\n  // return response to browser\n  return {\n    statusCode: 200,\n    body: JSON.stringify(data)\n  }\n}\nexport { }"],
+  "mappings": ";;;;AAAA;AAAA,QAAQ,UAAU,YAAY;AAC5B,UAAQ,IAAI;AAEZ,QAAM,OAAO,EAAE,MAAM,SAAS,KAAK,IAAI,KAAK;AAG5C,SAAO;AAAA,IACL,YAAY;AAAA,IACZ,MAAM,KAAK,UAAU;AAAA;AAAA;",
+  "names": []
+}
