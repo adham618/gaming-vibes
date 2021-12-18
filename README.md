@@ -1,6 +1,11 @@
 # Gaming Vibes
 
+a website with nextjs netlify-identity-widget
+
+you can visit this site in [https://gamingvibes-v.netlify.app]
+
 ![Screenshot](screenshot2.png)
+
 ![Screenshot](screenshot.png)
 
 ## Image Credit (for use in project)
