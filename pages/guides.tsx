@@ -6,7 +6,11 @@ const Guides: React.FC = () => {
   const { user } = useContext(AuthContext)
 
   useEffect(() => {
-    fetch("/.netlify/functions/guides")
+    fetch("/.netlify/functions/guides", {
+      headers: {
+        Authorization: 'bearer ' + user.token.access_token
+      }
+    })
       .then(res => res.json())
       .then(data => console.log(data))
   }, [user])
