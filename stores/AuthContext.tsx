@@ -1,6 +1,12 @@
 import { createContext, useEffect, useState } from "react";
 import netlifyIdentity from 'netlify-identity-widget'
-
+type AuthContext =
+  {
+    user: null,
+    login: () => void,
+    logout: () => void,
+    authReady: boolean
+  }
 export const AuthContext = createContext({
   user: null,
   login: () => { },
@@ -8,15 +14,9 @@ export const AuthContext = createContext({
   authReady: false
 })
 
-// export const AuthContext = createContext({
-//   user: null,
-//   login: () => { },
-//   logout: () => { },
-//   authReady: false
-// })
-
 const AuthContextProvider: React.FC = ({ children }) => {
   const [user, setUser] = useState<string | null | undefined | number>(null)
+  const [authReady, setAuthReady] = useState<boolean>(false)
 
   useEffect(() => {
 
@@ -29,6 +29,12 @@ const AuthContextProvider: React.FC = ({ children }) => {
     netlifyIdentity.on('logout', () => {
       setUser(null)
       console.log("logout")
+    })
+    // authReady
+    netlifyIdentity.on('init', (user: any) => {
+      setUser(user)
+      setAuthReady(true)
+      console.log("init")
     })
     // init netlify identity connection
     netlifyIdentity.init()
@@ -47,7 +53,7 @@ const AuthContextProvider: React.FC = ({ children }) => {
   }
 
 
-  const context = { user, login, logout }
+  const context = { user, login, logout, authReady }
 
   return (
     <AuthContext.Provider value={context}>
