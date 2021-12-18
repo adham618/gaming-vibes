@@ -7,16 +7,16 @@ const Guides: React.FC = () => {
 
   useEffect(() => {
     if (authReady) {
-      fetch("/.netlify/functions/guides", {
+      fetch('/.netlify/functions/guides', user && {
         headers: {
-          Authorization: 'bearer ' + user.token.access_token
+          Authorization: 'Bearer ' + user.token.access_token
         }
       })
         .then(res => res.json())
         .then(data => console.log(data))
     }
 
-  }, [user])
+  }, [user, authReady])
 
   return (
     <div className={styles.guides}>
